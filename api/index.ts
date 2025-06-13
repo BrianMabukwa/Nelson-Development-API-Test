@@ -7,7 +7,7 @@ app.use(cors());
 app.use(express.json());
 
 // POST endpoint for sorting characters
-app.post('/', (req, res) => {
+app.post('/sort', (req, res) => {
   const { data } = req.body;
 
   if (typeof data !== 'string') {
