@@ -56,14 +56,14 @@
           <form id="validationForm">
             <div class="mb-4">
               <h2 class="section-title">Email Address</h2>
-              <p class="mb-2 text-muted">Your email for testing</p>
-              <input type="email" id="email" class="form-control" placeholder="your@email.com" required>
+              <p class="mb-2 text-muted">Your email</p>
+              <input type="email" id="email" class="form-control" placeholder="john@gmail.com" required>
             </div>
 
             <div class="mb-4">
               <h2 class="section-title">String to Sort</h2>
-              <p class="mb-2 text-muted">Enter a string to sort alphabetically</p>
-              <input type="text" id="data" class="form-control" placeholder="example" required>
+              <p class="mb-2 text-muted">URL</p>
+              <input type="text" id="data" class="form-control" placeholder="http://" required>
             </div>
 
             <button type="submit" class="btn btn-primary validate-btn mt-3">
@@ -88,7 +88,7 @@
         const data = document.getElementById('data').value;
         
         try {
-          const response = await fetch('http://localhost:3000', {
+          const response = await fetch('http://localhost:3000/sort', {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json',
